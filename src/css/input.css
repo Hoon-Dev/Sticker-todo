@@ -1,0 +1,40 @@
+#input{
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    height: 32px;
+    overflow: hidden;
+    font-size: 0;
+}
+
+#input input{
+    height: 100%;
+    font-size: 16px;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+
+#input input[type=text]{
+    color: rgb(235, 235, 235);
+    padding-left: 6px;
+    width: 75%;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+}
+
+#input input[type=submit]{
+    color: rgb(165, 165, 165);
+    width: 25%;
+    border: 0;
+    outline: 0;
+    font-weight: 100;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.07);
+}
+
+#input input[type=submit]:hover{
+    background-color: rgba(255, 255, 255, 0.14);
+}
+
+#input input[type=submit]:active{
+    background-color: rgba(255, 255, 255, 0.2);
+}
