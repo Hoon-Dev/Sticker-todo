@@ -1,0 +1,81 @@
+#list{
+    height: calc(100vh - 64px);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin: 0;
+    padding: 0;
+    scrollbar-width: none;
+}
+
+#list li{
+    font-size: 0;
+    vertical-align: middle;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+    transform: translate(0);
+
+    animation-name: init-list;
+    animation-duration: .5s;
+    animation-play-state: running;
+    animation-timing-function: cubic-bezier(0.68, 0.43, 0.44, 1.21);
+}
+
+@keyframes init-list{
+    0%{
+        transform: translate(-100vw);
+    }
+    100%{
+        transform: translate(0);
+    }
+}
+
+#list span{
+    height: 25px;
+    font-size: 16px;
+    line-height: 25px;
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+
+#list span:first-child{
+    font-size: 14px;
+    color: rgb(207, 207, 207);
+    padding-left: 6px;
+    width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#list span:last-child{
+    user-select: none;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+    width: 16%;
+    margin: 2% 2%;
+    color: rgba(207, 207, 207, 0.253);
+    border: 1px solid rgba(207, 207, 207, 0.253);
+    border-radius: 2px;
+}
+
+#list span:last-child:hover{
+    color: rgba(207, 207, 207, 0.7);
+    border: 1px solid rgba(207, 207, 207, 0.7);
+}
+
+#list span:last-child:active{
+    color: rgba(207, 207, 207, 1);
+    border: 1px solid rgb(221, 221, 221);
+}
+
+#list span input{
+    width: calc(100% - 6px);
+    padding: 0;
+    font-size: 14px;
+    color: white;
+    outline: 0;
+    border: 0;
+    background-color: transparent;
+}

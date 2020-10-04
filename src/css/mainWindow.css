@@ -1,0 +1,103 @@
+::-webkit-scrollbar{
+    width: 0px;
+    height: 0px;
+}
+
+html, body{
+    height: 100vh;
+}
+
+body{
+    margin: 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+#wrapper{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: inline-block;
+    background-color: #333333;
+    text-align: left;
+
+    animation-name: init-warpper;
+    animation-duration: 2s;
+    animation-play-state: running;
+    animation-timing-function: cubic-bezier(0.4, 0.01, 0, 1);
+}
+
+@keyframes init-warpper{
+    0%{
+        width: 0;
+        height: 30px;
+    }
+    40%{
+        width: 100%;
+        height: 30px;
+    }
+    60%{
+        width: 100%;
+        height: 30px;
+    }
+    100%{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+#title{
+    user-select: none;
+    width: 100vw;
+    height: 30px;
+    background-color: #e6b905;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.5);
+
+    position: relative;
+}
+
+#title-bar{
+    -webkit-app-region: drag;
+    width: calc(100% - 34px);
+    height: 32px;
+    display: inline-block;
+}
+
+#close-button{
+    width: 34px;
+    height: 32px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+
+    transition-duration: .1s;
+}
+
+#close-button:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+#close-button:active{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#close-button::before,
+#close-button::after{
+    content: "";
+    width: 17px;
+    height: 1px;
+    display: inline-block;
+    background-color: #353535;
+
+    position: absolute;
+    top: 16px;
+    right: 8px;
+}
+
+#close-button::before{
+    transform: rotate(45deg);
+}
+
+#close-button::after{
+    transform: rotate(-45deg);
+}
