@@ -11,4 +11,5 @@
 
 ## Structure
 `StickerTodo`는 **MVC패턴**을 기반으로 설계되었습니다.
+
 ![diagram](diagram.png)
